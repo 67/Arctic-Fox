@@ -100,17 +100,6 @@ client.friendlyRegionName = region => {
   return `${flag} ${prettyName}`;
 };
 
-// "then is not a property"
-client.invertBool = perm => {
-  perm = !perm;
-  return perm;
-};
-
-/* client.tagToPerm = shortcut => {
-  const permName = ops[shortcut];
-  return permName;
-}; **/
-
 client.on("debug", console.log);
 client.on("error", console.error);
 client.on("warn", console.warn);
