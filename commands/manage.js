@@ -104,16 +104,13 @@ exports.func = (client) => {
             
           default:
             Object.keys(ops[args[0]]).forEach(perm => {
-              console.log(ops[args[0]][perm]);
-              console.log(servconf.preferences[ops[args[0]][perm]]);
               let op = ops[args[0]];
               if (op) servconf.preferences[op] = !servconf.preferences[op];
               {
-                message.channel.send("It works! heck");
-                message.channel.send(servconf.preferences[op]);
+                message.channel.send(`Set to \`${servconf.preferences[op]}\`. :+1:`);
                 fs.writeFileSync(`./servers/${message.guild.id}.json`, JSON.stringify(servconf, null, 2));
               }
-        });
+            });
             break;
         }
       } else {
