@@ -12,8 +12,7 @@ exports.func = (client) => {
     "run": (message, args) => {
       message.channel.send({file: `panpans/${[randint(1, 37)]}.jpg`}); // This is terrible.
     }
-  };
-  exports.func = (client) => {
+  }
     commands.eightball = {
       "help": "Get your fortune told.",
       "helpcat": "Fun",
@@ -23,7 +22,6 @@ exports.func = (client) => {
         message.channel.send(`:8ball: ${responses.eightball[randint(0, 20)]}`);
       }
     };
-  };
   /* exports.func = (client) => {
     commands.hewwo = {
       "help": "h-hewwo??? is any1 dewe??? owo",
@@ -34,7 +32,6 @@ exports.func = (client) => {
       }
     };
   }; **/
-  exports.func = (client) => {
     commands.excuse = {
       "help": "Need a quick BOFH-style excuse? This will do the trick.",
       "helpcat": "Fun",
@@ -44,8 +41,6 @@ exports.func = (client) => {
         message.channel.send(`Oops! The cause of the problem was... erm... ${responses.excuses[randint(0, 472)]}`);
 		  }
 	 };
-  };
-  exports.func = (client) => {
     commands.ordercorn = {
       "help": "/r/OldPeopleFacebook.",
       "helpcat": "Fun",
@@ -55,8 +50,6 @@ exports.func = (client) => {
         message.channel.send(responses.oldpeople[randint(0, 20)]);
 		  }
 	 };
-  };
-  exports.func = (client) => {
     commands.brmeme = {
       "help": "Memes brasileiros são memes melhores.",
       "helpcat": "Fun",
@@ -67,4 +60,3 @@ exports.func = (client) => {
 		  }
 	 };
   };
-};

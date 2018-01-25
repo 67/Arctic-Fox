@@ -31,7 +31,6 @@ exports.func = (client) => {
 		  }
   };
 };
-exports.func = (client) => {
   commands.serverinfo = {
     "help": "Get basic information about the server.",
     "helpcat": "Information",
@@ -72,4 +71,3 @@ exports.func = (client) => {
       });
     }
   };
-};
