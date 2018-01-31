@@ -7,7 +7,7 @@ const guildConfig = require("./assets/defaultconfig.js");
 
 client.on("ready", () => {
   commands = {};
-  version = "0.6.5";
+  version = "0.6.6";
   fs.readdir("./commands/", (err, files) => {
     // Thanks to Pierce01 and IanMurray for this code here.
     var indexed = [];
@@ -111,6 +111,8 @@ function clean (text) { // För rd-eval
 
 client.on("message", (message) => {
   if (message.channel.type === "dm") return;
+
+  if (message.author.id === "192322936219238400") return;
 
   if (!fs.existsSync(`./servers/${message.guild.id}.json`)) {
     guildConfig.nyGuild(message.guild.id, message.guild.name, message.guild.createdAt.toString(), message.guild.region, message.guild.ownerID);

@@ -31,7 +31,7 @@ exports.func = (client) => {
   commands.eval = {
     "aliases": ["exec", "debug"],
     "run": (message, args) => {
-      if (!message.author.id === config.ownerid) return;
+      if (message.author.id !== config.ownerid) return;
       try {
         const code = args.join(" ");
         result = eval(code);
